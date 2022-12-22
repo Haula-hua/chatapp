@@ -1,0 +1,177 @@
+* {
+    background-color: #e7e7eb;
+    color: #5e5eeb;
+}
+p{
+    color: #0000eb;
+}
+.friends_body {
+    display: flex;
+    flex-direction: column;
+}
+.friends_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 2vw;
+    margin-bottom: 30vw;
+}
+.friends_form {
+    display: flex;
+    top: 10vw;
+    left: 5vw;
+    width: 90%;
+    flex-direction: column;
+    position: relative;
+    padding: 1px 1px;
+    border-bottom: solid 1px #5e5eeb;
+}
+.friends_img {
+    position: relative;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border-radius: 50px;
+}
+.friends_name {
+    font-size: 17px;
+    font-weight: bolder;
+    padding-top: 0vw;
+    padding-bottom: 1.5vw;
+    padding-left: 1vw;
+}
+.friends_text {
+    font-size: 13px;
+    padding-left: 1vw;
+    color: #8d8deb;
+    margin-top: 0.5vw;
+}
+.friends_data {
+    margin-bottom: 3vw;
+    margin-top: 1vw;
+    position: absolute;
+    right: 5px;
+    color: #8d8deb;
+}
+.friends_img_name_text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vw;
+    margin-left: 2vw;
+}
+.friends_name_text {
+    display: flex;
+    flex-direction: column;
+}
+.friends_name_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.friends_button {
+    border-radius: 50%;
+    padding: 8px 20px;
+    border-color: #5e5eeb;
+    background-color: #e7e7eb;
+    line-height: 2em;
+    transition: .4s;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #5e5eeb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+@media  screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        position: relative;
+        z-index: 0;
+    }
+    * {
+        background-color: #e7e7eb;
+        color: #5e5eeb;
+    }
+    p{
+        color: #0000eb;
+        font-size: 15px;
+        margin: 0;
+    }
+    .friends_body {
+        display: flex;
+        flex-direction: column;
+    }
+    .friends_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        top: 2vw;
+        margin-bottom: 30vw;
+        z-index: -1;
+    }
+    .friends_form {
+        display: flex;
+        top: 50px;
+        left: 70px;
+        width: 85%;
+        flex-direction: column;
+        position: relative;
+        padding: 1px 1px;
+        border-bottom: solid 1px #5e5eeb;
+    }
+    .friends_img {
+        position: relative;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        border-radius: 50px;
+    }
+    .friends_name {
+        font-size: 17px;
+        font-weight: bolder;
+        padding-top: 0vw;
+        padding-bottom: 1.5vw;
+        padding-left: 1vw;
+    }
+    .friends_text {
+        font-size: 13px;
+        padding-left: 1vw;
+        color: #8d8deb;
+        margin-top: 0.5vw;
+    }
+    .friends_data {
+        margin-bottom: 3vw;
+        margin-top: 1vw;
+        position: absolute;
+        right: 5px;
+        color: #8d8deb;
+    }
+    .friends_img_name_text {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .friends_name_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .friends_name_data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .friends_button {
+        border-radius: 50%;
+        padding: 8px 20px;
+        border-color: #5e5eeb;
+        background-color: #e7e7eb;
+        line-height: 2em;
+        transition: .4s;
+        font-size: 1vw;
+        font-weight: bold;
+        color: #5e5eeb;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+    }
+}

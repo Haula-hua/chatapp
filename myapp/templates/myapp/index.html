@@ -1,1 +1,22 @@
-I
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/myapp/css/index.css">
+    <title>chat's app?</title>
+</head>
+<body>
+    <div class="content">
+        <h1>chat's app?</h1>
+        <form action="{% url 'myapp:login_view' %}" method="GET" >
+            {% csrf_token %}
+            <label><input type="submit" value="log   in" class="button"></label>
+        </form>
+        <br>
+        <form action="{% url 'myapp:signup_view' %}" method="GET">
+            {% csrf_token %}
+            <label><input type="submit" value="sign up" class="button"></label>
+        </form>
+    </div>    
+</body>
+</html>

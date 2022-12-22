@@ -1,0 +1,295 @@
+* {
+    background-color: #e7e7eb;
+    color: #5e5eeb;
+}
+p{
+    color: #0000eb;
+    padding: 5vw 5vw 2.4vw 0vw;
+
+}
+.header {
+    width: 100vw;
+    height: 11.5vw;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+}
+.back_button {
+    border: none;
+    padding: 5vw 5vw 2.4vw 0vw;
+    background-color: #e7e7eb;
+    transition: .4s;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #0000eb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-width: 1vw;
+}
+.talk_room_img {
+    border-radius: 40px;
+}
+.talk_room_head {
+    display: flex;
+    flex-direction: row;
+}
+.talk_room_img_username_text {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1.2vw;
+}
+.talk_room_username_text {
+    display: flex;
+    flex-direction: column;
+}
+.talk_room_text {
+    overflow-wrap: break-word;
+    word-break: break-all;
+
+}
+.talk_room_date {
+    padding-bottom: 0.0vw;
+    border-bottom: solid 1px #5e5eeb;
+}
+.talk_room_body {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3vw;
+}
+.talk_room_messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 10vw;
+    left: 5vw;
+    width: 90%;
+    margin-bottom: 30vw;
+}
+/* side-bar begin */
+.talk_room_side {
+    display: flex;
+    bottom: 10vw;
+    left: 0vw;
+    flex-direction: column;
+    position: relative;
+    padding: auto;
+    border-bottom: solid 1px #5e5eeb;
+}
+.talk_room_send {
+    width: 99%;
+    height: 10vw;
+    position: fixed;
+    bottom: 2px;
+    left: 0.5vw;
+    flex-direction: row;
+    justify-content: center;
+    border: solid;
+}
+.talk_room_send_form {
+    display: flex;
+    position:sticky;
+    align-items: center;
+    text-align: center;
+    border-right: solid 1px #0000eb;
+}
+.test {
+    font-size: 0px;
+    color: #e7e7eb;
+}
+.talk_room_submit_button {
+    border: none;
+    padding: 1vw 1vw;
+    background-color: #e7e7eb;
+    transition: .4s;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #5e5eeb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-width: 1vw;
+}
+#id_text {
+    width: 88.5%;
+    height: 9.3vw;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #5e5eeb;
+    background-color: #e7e7eb;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+/* side-bar end */
+
+@media  screen and (min-width: 768px) {
+    * {
+        background-color: #e7e7eb;
+        color: #5e5eeb;
+        font-size: 15px;
+    }
+    
+    p{
+        color: #0000eb;
+        font-size: 15px;
+        margin: 0;
+        padding: 8px;
+    }
+    .header {
+        width: 100vw;
+        height: 7vw;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        z-index: 1;
+    }
+    .back_button {
+        margin: 0 -50px;
+        height: 20px;
+        border: none;
+        padding: 10px 10px 1px 0vw;
+        background-color: #e7e7eb;
+        transition: .4s;
+        font-size: 20px;
+        font-weight: bold;
+        color: #0000eb;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-width: 1vw;
+    }
+    .talk_room_img {
+        border-radius: 40px;
+    }
+    .talk_room_head {
+        height: 20px;
+    }
+    .talk_room_img_username_text {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.2vw;
+    }
+    .talk_room_username_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .talk_room_date {
+        padding-bottom: 0.0vw;
+        border-bottom: solid 1px #5e5eeb;
+    }
+    .talk_room_body {
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px;
+    }
+    .talk_room_messages {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        top: 10vw;
+        left: 12vw;
+        margin-bottom: 30vw;
+    }
+    /* side-bar begin */
+    .talk_room_side {
+        display: flex;
+        bottom: 10vw;
+        left: 12vw;
+        flex-direction: column;
+        position: relative;
+        padding: auto;
+        border-bottom: solid 1px #5e5eeb;
+    }
+    .talk_room_send {
+        margin: 0px -90px;
+        width: 100%;
+        height: 10vw;
+        position: fixed;
+        bottom: 2px;
+        left: 10vw;
+        flex-direction: row;
+        justify-content: center;
+        border: solid 3px #5e5eeb;
+    }
+    .talk_room_send_form {
+        display: flex;
+        position:sticky;
+        align-items: center;
+        text-align: center;
+        border-right: solid 1px #5e5eeb;
+    }
+    #id_text {
+        width: 88.5%;
+        height: 9.3vw;
+    }
+    .footer {
+        width: 10vw;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .footer-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        position:sticky;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        border-right: solid 1px #5e5eeb;
+    }
+    .footer-container__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 1vw;
+        width: 50%;
+        height: 20vw;
+        align-items: center;
+        text-decoration: none;
+        color: #5e5eeb;
+    }
+    .footer-item__link {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        text-decoration: none;
+    }
+    .footer-item__icon {
+        display: block;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1.2rem;
+    }
+    .footer-item__text {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 0.8rem;
+        font-size: 0.8rem;
+        color: rgb(1, 1, 81);
+    }
+
+    body {
+        margin: -10px -50px;
+        width: 100%;
+        font-family: var(--bs-font-sans-serif);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #5e5eeb;
+        background-color: #e7e7eb;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    
+    
+}

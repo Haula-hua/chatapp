@@ -1,0 +1,26 @@
+{% extends "myapp/base.html" %}
+{% block extra_style %}
+    <link rel="stylesheet" href="../../static/myapp/css/search.css">
+{% endblock %}
+    {% block header-title %}
+    <p>search </p>
+    {% endblock %}
+<body class="search_body">
+    {% block content %}
+    <span class="search_content">
+        {% for users in latest_public_user_list %}  
+        <form action="{% url 'myapp:search' users.id%}" method="POST" class="search_form_big">
+            {% csrf_token %}
+            <div class="search_form">
+                <a href="{% url 'myapp:profile' users.id%}">
+                    <img width="30" height="30" alt="" src="{{ users.img.url }}" class="search_img">
+                </a>
+                <label class="search_username">{{ users.username |truncatechars:12 }}</label>
+            </div>
+            <input type="submit" value="add" class="search_button">
+        </form>
+        {% endfor %}
+    </span>
+    {% endblock %}
+</body>
+

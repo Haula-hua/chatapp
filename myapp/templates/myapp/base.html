@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/base.css' %}" />
+    <link rel="shortcut icon" href="../myapp/{% static 'myapp/img/people-24px.svg' %}">
+    <link rel="apple-touch-icon" href="../myapp/{% static 'myapp/img/people-24px.svg' %}">
     {% block extra_style %}{% endblock %}
-    <title>DeMiAインターン</title>
+    <title>chat's app?</title>
 </head>
 <body>
     {% block header %}
@@ -19,26 +22,36 @@
     </header>
     {% endblock %}
 
+    
     {% block content %}
     {% endblock %}
+    
 
     {% block footer %}
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-container__item">
-                <a href="{% url 'friends' %}" class="footer-item__link">
+                <a href="{% url 'myapp:friends' %}" class="footer-item__link">
                     <span class="footer-item__icon"><img src="{% static 'myapp/img/people-24px.svg' %}"></span>
-                    <span class="footer-item__text">友達</span>
+                    <span class="footer-item__text">friends</span>
                 </a>
             </div>
             <div class="footer-container__item">
-                <a href="{% url 'setting' %}" class="footer-item__link">
+                <a href="{% url 'myapp:go_search' %}" class="footer-item__link">
+                    <span class="footer-item__icon"><img src="{% static 'myapp/img/people-24px.svg' %}"></span>
+                    <span class="footer-item__text">search</span>
+                </a>
+            </div>
+            <div class="footer-container__item">
+                <a href="{% url 'myapp:setting' request.user.pk%}" class="footer-item__link">
                     <span class="footer-item__icon"><img src="{% static 'myapp/img/settings-black-18dp.svg' %}"></span>
-                    <span class="footer-item__text">設定</span>
+                    <span class="footer-item__text">setting</span>
                 </a>
             </div>
         </div>
     </footer>
+    {% endblock %}
+    {% block side %}
     {% endblock %}
 </body>
 </html>

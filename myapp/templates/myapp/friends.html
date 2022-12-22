@@ -1,0 +1,34 @@
+{% extends "myapp/base.html" %}
+{% block extra_style %}
+    <link rel="stylesheet" href="../../static/myapp/css/friends.css">
+{% endblock %}
+    {% block header-title %}
+    <p>{{ request.user }}'s friends </p>
+    {% endblock %}
+<body class="friends_body">
+    {% block content %}
+    <div class="friends_content">
+        {% for room, friend_name, friend_img, friend_id, datetime in room_list%}
+        <a href="{% url 'myapp:talk_room' friend_id%}#page_bottom" method="POST" class="friends_form">
+            {% csrf_token %}
+            <div class="friends_img_name_text">
+                {% if friend_img %}
+                <img width="40" height="40" alt="" src="{{ friend_img.url }}" class="friends_img">
+                {% else %}
+                notyet
+                <!--<img width="40" height="40" alt="" src="../../../myapp/static/myapp/img/people-24px.svg" class="friends_img">-->
+                {% endif %}
+                <div class="friends_name_text">
+                    <div><label class="friends_name">{{ friend_name  }}</label></div>
+                    <div class="friends_data">
+                        <label>{{ room.datetime  }}</label>
+                    </div>
+                    <label class="friends_text">{{ room.text |truncatechars:23}}</label>
+                </div>
+            </div>
+        </a>
+        </form>
+    {% endfor %}
+    </div>
+    {% endblock %}
+</body>      

@@ -1,1 +1,78 @@
-S
+{% extends "myapp/base.html" %}
+{% block extra_style %}
+    <link rel="stylesheet" href="../../static/myapp/css/setting.css">
+{% endblock %}
+    {% block header-title %}
+    <p>settings </p>
+    <div class="setting_function">
+        <form  action="{% url 'myapp:logout' %}" method="POST"  enctype="multipart/form-data" class="setting_logout">
+            {% csrf_token %}
+            <input type="submit" value="log out" class="button">
+        </form>
+    </div>
+    {% endblock %}
+
+{% block content %}
+<body class="setting_body">
+    <div class="setting_username_email_img_password">
+        <a href="{% url 'myapp:setting_username' request.user.pk%}" method="POST"  enctype="multipart/form-data" class="setting_username">
+            {% csrf_token %}
+            <label class="setting_label">Display name</label>
+            <label class="setting_value">{{ request.user }}</label>
+        </a>
+        <a href="{% url 'myapp:setting_email' request.user.pk%}" method="POST"  enctype="multipart/form-data" class="setting_email">
+        {% csrf_token %}
+            <label class="setting_label">Email address</label>
+            <label class="setting_value">{{ user.email }}</label>
+        </a>
+        <a  href="{% url 'myapp:setting_img' request.user.pk%}" method="GET"  enctype="multipart/form-data" class="setting_img">
+            {% csrf_token %}
+            <label class="setting_label">Profile icon</label>
+            {% if user.signup.img %}
+                <img width="30" height="30" alt="" src="{{ user.signup.img.url }}">
+            {% else %}
+                none
+            {% endif %}
+        </a>
+        <a href="{% url 'myapp:setting_password' %}" method="POST"  enctype="multipart/form-data" class="setting_password">
+            {% csrf_token %}
+            <label class="setting_label">Password</label>
+            <label class="setting_value">******</label>
+        </a>
+        <a href="{% url 'myapp:setting' request.user.pk%}"enctype="multipart/form-data" class="setting_private" method="POST">
+            {% csrf_token %}
+            <label class="setting_label">Private</label>
+            <label class="setting_value">
+                <form  method="POST" enctype="multipart/form-data" action="">
+                    {% csrf_token %}
+                    {{ form.private }}
+                    <input type="submit" value="save" class="setting_button">
+                </form>
+            </label>
+        </a>
+        <a href="{% url 'myapp:setting_status' request.user.pk%}" method="POST"  enctype="multipart/form-data" class="setting_status">
+            {% csrf_token %}
+            <label class="setting_label">Status message</label>
+            <label class="setting_value">
+                {% if user.signup.status_message %}
+                    {{ user.signup.status_message|truncatechars:23 }}
+                {% else %}
+                    none
+                {% endif %}
+            </label>
+        </a>
+        <a href="{% url 'myapp:setting_profile' request.user.pk%}" method="POST"  enctype="multipart/form-data" class="setting_status">
+            {% csrf_token %}
+            <label class="setting_label">Profile</label>
+            <label class="setting_value">
+                {% if user.signup.profile %}
+                    {{ user.signup.profile|truncatechars:23 }}
+                {% else %}
+                    none
+                {% endif %}
+            </label>
+        </a>
+    </div>
+</body>
+
+{% endblock %}

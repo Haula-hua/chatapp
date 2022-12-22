@@ -1,0 +1,154 @@
+* {
+    background-color: #e7e7eb;
+    color: #5e5eeb;
+    font-size: 3vw;
+}
+
+p{
+    color: #0000eb;
+    font-size: 4vw;
+}
+
+.button {
+    border-radius: 4%;
+    padding: 2vw 2.5vw;
+    border-color: #5e5eeb;
+    background-color: #e7e7eb;
+    line-height: 2em;
+    transition: .4s;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #5e5eeb;
+    margin-top: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ img {
+    border-radius: 40px;
+    margin-bottom: 1vw;
+}
+.setting_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5vw;
+}
+.setting_username_email_img_password {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 10vw;
+    left: 5vw;
+    width: 90%;
+    padding-bottom: 27vw;
+}
+.setting_username, .setting_email, .setting_img, .setting_password, .setting_private, .setting_status {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: solid 1px #5e5eeb;
+}
+.setting_function {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 10vw;
+    left: 5vw;
+    width: 90%;
+}
+.setting_label {
+    margin-top: 1vw;
+}
+.setting_value {
+    font-size: 5vw;
+    margin-top: 1vw;
+}
+.setting_logout {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70vw;
+    margin-top: -17.5vw;
+    
+}
+
+@media  screen and (min-width: 768px) {
+    * {
+        background-color: #e7e7eb;
+        color: #5e5eeb;
+        font-size: 15px;
+    }
+    
+    p{
+        color: #0000eb;
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .button {
+        border-radius: 4%;
+        padding: 5px 20px;
+        border-color: #5e5eeb;
+        background-color: #e7e7eb;
+        line-height: 2em;
+        transition: .4s;
+        font-size: 15px;
+        font-weight: bold;
+        color: #5e5eeb;
+        margin-top: 1px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+     img {
+        border-radius: 40px;
+        margin-bottom: 1vw;
+    }
+    .setting_body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0px;
+        position: relative;
+        z-index: -1;
+    }
+    .setting_username_email_img_password {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        top: max(7vh, 9vw);
+        left: 5vw;
+        width: 90%;
+        z-index: -1;
+    }
+    .setting_username, .setting_email, .setting_img, .setting_password, .setting_private, .setting_status {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: solid 1px #5e5eeb;
+        margin-left: 50px;
+    }
+    .setting_function {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        top: 10vw;
+        left: 5vw;
+        width: 90%;
+    }
+    .setting_label {
+        margin-top: 1vw;
+    }
+    .setting_value {
+        font-size: 20px;
+        margin-top: 1vw;
+    }
+    .setting_logout {
+        display: flex;
+        flex-direction: row;
+        margin-left: 70vw;
+        margin-top: -14vw;
+        width: 90%;
+        
+    }
+}
