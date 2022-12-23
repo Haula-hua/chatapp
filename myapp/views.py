@@ -168,7 +168,6 @@ def go_search(request):#既にrequest.userとのRoomを持っているuserを外
     for i in public:
         if not (i.id,) in existing_rooms_list and not (i.id,) in existing_rooms_list2:
             public_user_list.append(i)
-
     context={
         "latest_public_user_list": public_user_list,
         "form" : RoomForm,

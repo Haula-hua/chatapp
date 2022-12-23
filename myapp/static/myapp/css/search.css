@@ -80,6 +80,7 @@ p{
     }
     .search_form {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     position: relative;
     top: 50px;
@@ -88,7 +89,7 @@ p{
     border-bottom: solid 1px #5e5eeb;
     margin-top: 10px;
     width: 85%;
-}
+    }
     .search_img {
         position: relative;
         padding-top: 1vw;

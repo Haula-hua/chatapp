@@ -4,6 +4,12 @@
 {% endblock %}
     {% block header-title %}
     <p>settings </p>
+    <div class="setting_mypage">
+        <form  action="{% url 'myapp:profile' request.user.pk%}" method="POST"  enctype="multipart/form-data" class="setting_logout">
+            {% csrf_token %}
+            <input type="submit" value="my page" class="button">
+        </form>
+    </div>
     <div class="setting_function">
         <form  action="{% url 'myapp:logout' %}" method="POST"  enctype="multipart/form-data" class="setting_logout">
             {% csrf_token %}
